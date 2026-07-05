@@ -21,14 +21,16 @@ export function openTelegramFullscreen() {
   }
 }
 
-export function confirmSearch() {
+export function confirmSearch(onAnswer) {
   const webApp = getTelegramWebApp();
-  const text = 'Искать?';
+  const text = 'Вы хотите искать?';
 
   if (webApp && typeof webApp.showConfirm === 'function') {
-    webApp.showConfirm(text);
+    webApp.showConfirm(text, (confirmed) => {
+      onAnswer(Boolean(confirmed));
+    });
     return;
   }
 
-  window.confirm(text);
+  onAnswer(window.confirm(text));
 }
