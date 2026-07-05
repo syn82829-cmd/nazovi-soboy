@@ -1,1 +1,0 @@
-# noswitch-mini-app
