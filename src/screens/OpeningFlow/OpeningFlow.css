@@ -22,3 +22,7 @@
   transform: translateX(-50%);
   z-index: 3;
 }
+
+.opening-flow--search-lifted .opening-flow__search {
+  bottom: max(374px, calc(env(safe-area-inset-bottom) + 358px));
+}
