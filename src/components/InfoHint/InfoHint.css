@@ -1,0 +1,58 @@
+.info-hint__button {
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 24px;
+  line-height: 1;
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.36);
+  backdrop-filter: blur(18px);
+}
+
+.info-hint {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.info-hint__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(8px);
+}
+
+.info-hint__card {
+  position: relative;
+  width: min(360px, calc(100vw - 48px));
+  padding: 28px 24px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 30px;
+  background: rgba(18, 18, 18, 0.86);
+  color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 28px 100px rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(24px);
+}
+
+.info-hint__card p {
+  margin: 0 0 16px;
+  font-size: 20px;
+  line-height: 1.32;
+  letter-spacing: -0.04em;
+}
+
+.info-hint__stay {
+  width: 100%;
+  height: 48px;
+  margin-top: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+}
