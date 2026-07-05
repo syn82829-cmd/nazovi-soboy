@@ -1,0 +1,24 @@
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --text-primary: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-faint: rgba(255, 255, 255, 0.22);
+
+  --surface-phrase: rgba(255, 255, 255, 0.06);
+  --surface-search: rgba(255, 255, 255, 0.08);
+
+  --border-phrase: rgba(255, 255, 255, 0.08);
+  --border-search: rgba(255, 255, 255, 0.14);
+
+  --radius-phrase: 18px;
+  --radius-search: 999px;
+
+  --screen-x: 22px;
+  --search-height: 58px;
+
+  --float-slow: 24s;
+  --float-medium: 18s;
+  --float-fast: 14s;
+}
