@@ -1,7 +1,6 @@
 .opening-flow {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  position: fixed;
+  inset: 0;
   overflow: hidden;
   background:
     radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.045), transparent 38%),
@@ -16,9 +15,9 @@
 }
 
 .opening-flow__search {
-  position: absolute;
+  position: fixed;
   left: 50%;
-  bottom: max(86px, calc(env(safe-area-inset-bottom) + 70px));
+  bottom: calc(var(--keyboard-height, 0px) + 24px);
   transform: translateX(-50%);
   z-index: 3;
 }
