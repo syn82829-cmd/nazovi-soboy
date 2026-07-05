@@ -1,5 +1,9 @@
+export function getTelegramWebApp() {
+  return window.Telegram?.WebApp;
+}
+
 export function openTelegramFullscreen() {
-  const webApp = window.Telegram?.WebApp;
+  const webApp = getTelegramWebApp();
 
   if (!webApp) {
     return;
@@ -15,4 +19,16 @@ export function openTelegramFullscreen() {
   if (typeof webApp.disableVerticalSwipes === 'function') {
     webApp.disableVerticalSwipes();
   }
+}
+
+export function confirmSearch() {
+  const webApp = getTelegramWebApp();
+  const text = 'Вы уверены, что хотите искать?';
+
+  if (webApp && typeof webApp.showConfirm === 'function') {
+    webApp.showConfirm(text);
+    return;
+  }
+
+  window.confirm(text);
 }
