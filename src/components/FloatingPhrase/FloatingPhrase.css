@@ -3,18 +3,18 @@
   left: var(--phrase-x);
   top: var(--phrase-y);
   width: max-content;
-  max-width: 46vw;
+  max-width: 48vw;
   padding: 10px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.045);
-  color: rgba(255, 255, 255, 0.56);
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 20px;
   line-height: 1;
   letter-spacing: -0.04em;
   white-space: nowrap;
-  box-shadow: 0 14px 46px rgba(0, 0, 0, 0.24);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 46px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px);
   transform: translate(-50%, -50%);
   animation-name: phrase-float;
   animation-duration: var(--phrase-duration);
@@ -27,27 +27,27 @@
   0% {
     transform: translate(-50%, 62vh);
     opacity: 0;
-    filter: blur(0.4px);
+    filter: blur(0.2px);
   }
 
   10% {
-    opacity: 0.62;
+    opacity: 0.78;
     filter: blur(0);
   }
 
-  40% {
-    opacity: 0.44;
-    filter: blur(0.35px);
+  42% {
+    opacity: 0.58;
+    filter: blur(0.2px);
   }
 
   72% {
-    opacity: 0.2;
-    filter: blur(1.1px);
+    opacity: 0.3;
+    filter: blur(0.9px);
   }
 
   100% {
     transform: translate(-50%, -124vh);
     opacity: 0;
-    filter: blur(2.2px);
+    filter: blur(2px);
   }
 }
