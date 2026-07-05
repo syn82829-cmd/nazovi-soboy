@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 
 import { confirmSearch } from '../../app/telegramViewport.js';
 import { FloatingPhrase } from '../../components/FloatingPhrase/FloatingPhrase.jsx';
+import { InfoHint } from '../../components/InfoHint/InfoHint.jsx';
 import { SearchLine } from '../../components/SearchLine/SearchLine.jsx';
 import { floatingPhrases } from '../../data/floatingPhrases.js';
 
@@ -27,6 +28,7 @@ const phraseScene = [
 export function OpeningFlow() {
   const [name, setName] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
   const isWaitingForAnswer = useRef(false);
   const inputRef = useRef(null);
 
@@ -94,6 +96,12 @@ export function OpeningFlow() {
           onSearchIntent={handleSearchIntent}
           inputRef={inputRef}
           isOpen={isSearchOpen}
+        />
+
+        <InfoHint
+          isOpen={isInfoOpen}
+          onOpen={() => setIsInfoOpen(true)}
+          onClose={() => setIsInfoOpen(false)}
         />
       </div>
     </section>
