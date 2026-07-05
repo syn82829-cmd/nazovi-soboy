@@ -1,19 +1,27 @@
 import './SearchLine.css';
 
-export function SearchLine({ value, onChange, onSubmit }) {
+export function SearchLine({ value, onChange, onSubmit, onSearchIntent }) {
   return (
     <form className="search-line" onSubmit={onSubmit}>
-      <span className="search-line__prefix">Я</span>
+      <button
+        className="search-line__call"
+        type="button"
+        onClick={onSearchIntent}
+        aria-label="Позвать поиск"
+      >
+        я<span className="search-line__dots">...</span>
+      </button>
+
       <input
         className="search-line__input"
         value={value}
         onChange={onChange}
-        aria-label="Продолжить Я"
+        onFocus={onSearchIntent}
+        aria-label="Продолжить я"
         autoComplete="off"
         autoCapitalize="none"
         spellCheck="false"
       />
-      {!value && <span className="search-line__ghost">...</span>}
     </form>
   );
 }
